@@ -1,0 +1,832 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 1280px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    background: #F1F1F1;
+}
+
+/*---Logo---*/
+
+.logo {
+    width: 200px;
+    height: 70px;
+    background-image: url(../images/logo/logo.jpg.png);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo a {
+    padding: 100%;
+}
+
+/*---Navigation---*/
+
+nav {
+    width: 100%;
+    background: white;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 1px 2px grey;
+}
+
+.mainNav {
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #697578;
+    letter-spacing: 0.05em;
+    padding: 5px 0;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+nav a:hover i {
+    color: #55BB88;
+}
+
+/*----products--- */
+
+.navPro {
+    position: relative;
+}
+
+.navPro2 {
+    position: absolute;
+    background: #fff;
+    visibility: hidden;
+    height: 0px;
+    border-radius: 0 0 5px 5px;
+    transition: height 200ms linear;
+    overflow: hidden;
+}
+
+.navPro2 ul,
+.navLang2 ul {
+    padding: 0 20px;
+}
+
+.navPro2 li,
+.navLang2 li {
+    display: block;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+.navPro2 a,
+.navLang2 a {
+    display: block;
+}
+
+.navPro:hover .navPro2 {
+    visibility: visible;
+    height: 285px;
+}
+
+/*---language---*/
+
+.navLang {
+    position: relative;
+}
+
+.navLang2 {
+    border-radius: 0 0 5px 5px;
+    position: absolute;
+    right: -20px;
+    visibility: hidden;
+    background: #fff;
+    width: 80px;
+    height: 0px;
+    transition: height 200ms linear;
+    overflow: hidden;
+}
+
+.navLang:hover .navLang2 {
+    visibility: visible;
+    height: 160px;
+}
+
+/*---header---*/
+
+header {
+    width: 100%;
+    height: 500px;
+    background: #1f4037;
+    background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);
+    background: linear-gradient(to right, #99f2c8, #1f4037);
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerContainer {
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px 0 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    color: #fff;
+}
+
+.headerImage {
+    background-image: url(../images/covid.png);
+    background-size: cover;
+    background-position: center;
+    width: 800px;
+    height: 500px;
+}
+
+.headerText {
+    align-self: center;
+    text-align: right;
+}
+
+.headerText h1 {
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+
+.headerText p {
+    margin-bottom: 75px;
+}
+
+.headerText a {
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    overflow: hidden;
+    position: relative;
+}
+
+.headerText a:hover {
+    -webkit-box-shadow: inset 0px 0px 10px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 10px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 10px -5px rgba(0, 0, 0, 0.75);
+    transition: all 200ms ease-in 700ms;
+}
+
+.headerText a::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 0;
+    background: #fff;
+    left: 0;
+    bottom: 0;
+}
+
+.headerText a:hover::before {
+    height: 100%;
+    transition: height 100ms ease-in-out;
+}
+
+.headerText a::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 0;
+    background: #fff;
+    left: 0;
+    top: 0;
+}
+
+.headerText a:hover::after {
+    width: 100%;
+    transition: width 200ms linear 100ms;
+}
+
+.headerText span::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 0;
+    background: #fff;
+    top: 0;
+    right: 0;
+}
+
+.headerText a:hover span::before {
+    height: 100%;
+    transition: height 100ms linear 300ms;
+}
+
+.headerText span::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+}
+
+.headerText a:hover span::after {
+    width: 100%;
+    transition: width 200ms linear 500ms;
+}
+
+/*---main---*/
+
+main {
+    width: 1125px;
+    height: auto;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 240px;
+    height: 300px;
+    overflow: hidden;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    background-color: mintcream;
+    position: relative;
+    margin: 20px;
+    -webkit-box-shadow: 1px 1px 6px 0px rgba(212, 212, 212, 1);
+    -moz-box-shadow: 1px 1px 6px 0px rgba(212, 212, 212, 1);
+    box-shadow: 1px 1px 6px 0px rgba(212, 212, 212, 1);
+}
+
+.productPhoto {
+    width: 100%;
+    height: 240px;
+    transition: transform 200ms ease-in;
+}
+
+.box:hover .productPhoto {
+    transform: scale(1.02);
+}
+
+.box p {
+    margin-top: 10px;
+    text-align: center;
+    color: #697578;
+    transition: color 200ms ease-in;
+}
+
+.box:hover p {
+    color: #55BB88;
+}
+
+.box a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 100%;
+}
+
+.box::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background: #55BB88;
+    position: absolute;
+    bottom: -5px;
+    transition: bottom 200ms ease-in;
+}
+
+.box:hover::before {
+    bottom: 0;
+}
+
+/*---products---*/
+
+.item1 {
+    background-image: url(../images/products/foodContainers.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.item2 {
+    background-image: url(../images/products/foodBoxBio.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.item3 {
+    background-image: url(../images/products/masksAndGloves.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+/*---news---*/
+
+.news {
+    width: 1125px;
+    margin: 50px auto 100px;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.newsBox {
+    width: 320px;
+    height: 320px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 60px;
+    -webkit-box-shadow: 1px 1px 6px 0px rgba(212, 212, 212, 1);
+    -moz-box-shadow: 1px 1px 6px 0px rgba(212, 212, 212, 1);
+    box-shadow: 1px 1px 6px 0px rgba(212, 212, 212, 1);
+}
+
+.newsBox a {
+    width: 100%;
+    height: 20%;
+    text-decoration: none;
+    color: #fff;
+    background: rgba(85, 187, 136, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.newsBox a:hover {
+    background: rgba(85, 187, 136);
+}
+
+.newsPhoto1 {
+    background-image: url(../images/products/gloves.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transform: scale(1.03);
+}
+
+.newsPhoto2 {
+    background-image: url(../images/products/ecoIndeliai.jpg);
+    background-size: cover;
+    background-position: bottom;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+.newsPhoto3 {
+    background-image: url(../images/products/masks.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.newsPhoto4 {
+    background-image: url(../images/products/box.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+/*---headers---*/
+
+.categoriesHeader {
+    margin-top: 100px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #424242;
+}
+
+.categoriesHeader span {
+    background: #F1F1F1;
+    padding: 0 10px;
+}
+
+.categoriesHeader h1 {
+    text-align: center;
+    width: 40%;
+    border-bottom: 1px solid #424242;
+    line-height: 0.1em;
+    font-size: 24px;
+}
+
+
+/*---footer---*/
+
+footer {
+    margin-top: 50px;
+    height: 200px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.footerInfo {
+    margin: 0 auto;
+    width: 1240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerInfo li {
+    margin: 5px 0 0 5px;
+    color: #424242;
+}
+
+.footerInfo a {
+    text-decoration: none;
+    color: #424242;
+    transition: color 150ms linear;
+}
+
+.footerInfo a:hover {
+    color: #424242;
+    text-decoration: underline;
+}
+
+.footerInfo i {
+    font-size: 48px;
+    margin-left: 20px;
+    transition: color 200ms ease-in;
+}
+
+.footerInfo i:hover {
+    color: #64D7D6;
+}
+
+.footer2 {
+    width: 100%;
+    height: 40px;
+    background: #424242;
+    display: flex;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*---contacts---*/
+
+.contacts {
+    margin-top: 80px;
+    height: 300px;
+    background-image: url(../images/contact.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+}
+
+.contacts h1 {
+    text-shadow: 1px 0 1px black, 0 1px 1px black;
+}
+
+.contactsInfo {
+    width: 1280px;
+    height: auto;
+    margin: 50px auto;
+    padding: 0 20px;
+    color: #424242;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contactsInfo h2 {
+    margin: 20px 0;
+}
+
+.contactsInfo span {
+    font-weight: bold;
+}
+
+.contactsInfo p {
+    margin-top: 50px;
+    ;
+    text-align: justify;
+}
+
+.contactsInfo li,
+.formText li {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+.contactsInfo ul {
+    margin: 20px 0;
+}
+
+.contactsInfo i {
+    font-size: 18px;
+}
+
+/*---googleMap---*/
+
+.map {
+    display: flex;
+    justify-content: center;
+}
+
+iframe {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/*---form---*/
+
+.form {}
+
+.form input,
+.form textarea {
+    width: 400px;
+    display: block;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.form input[type=submit] {
+    background-color: #55BB88;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form input[type=submit]:hover {
+    background-color: #55BB99;
+}
+
+.form textarea {
+    height: 200px;
+}
+
+/*---aboutUs---*/
+
+.aboutUs {
+    margin-top: 80px;
+    height: 300px;
+    background-image: url(../images/apieMus.jpeg);
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+}
+
+.aboutUsMain {
+    width: 1280px;
+    padding: 50px 20px 0;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.aboutUsMain ul {
+    margin: 25px;
+}
+
+.aboutUsMain li {
+    margin: 10px 0;
+    list-style-type: disc;
+}
+
+/*
+--------------------------------------------------------------
+categoriesCarcass
+--------------------------------------------------------------
+*/
+
+.categoriesCarcass {
+    width: 1280px;
+    height: auto;
+    padding: 0 20px;
+    margin: 100px auto;
+    display: flex;
+}
+
+.CategoriesFoto {
+    width: 300px;
+    height: 250px;
+    background-image: url(../images/products/foodContainers.jpg);
+    background-size: cover;
+    border: solid 1px lightgray;
+    -webkit-box-shadow: 1px 1px 6px 0px rgba(212, 212, 212, 1);
+    -moz-box-shadow: 1px 1px 6px 0px rgba(212, 212, 212, 1);
+    box-shadow: 1px 1px 6px 0px rgba(212, 212, 212, 1);
+}
+
+.cF1 {
+    background-image: url(../images/products/foodContainers.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.cF2 {
+    background-image: url(../images/products/foodBoxBio.jpg);
+    background-size: cover;
+}
+
+.cF3 {
+    background-image: url(../images/products/masksAndGloves.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.categoriesInfo {
+    width: 600px;
+    justify-self: center;
+    margin-left: 50px;
+    color: #424242;
+    text-align: justify;
+}
+
+.categoriesInfoP {
+    margin: 20px 0;
+}
+
+.categoriesInfo ul {
+    margin: 20px;
+}
+
+/*---table---*/
+
+.categoriesTable {
+    width: 1280px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+table {
+    width: 1240px;
+    display: table;
+    border-collapse: collapse;
+}
+
+th {
+    background: #92e3e2;
+    border: solid 1px #424242;
+    font-weight: 200;
+    color: #424242;
+    font-weight: bold;
+}
+
+td {
+    border: solid 1px;
+    text-align: center;
+    font-size: 14px;
+}
+
+tr:nth-child(odd) {
+    background: #f3f3f3;
+}
+
+tr:nth-child(even) {
+    background: #fff;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+tr:hover {
+    background: #fffae6;
+}
+
+tr:hover .tableImg {
+    transform: scale(1.5);
+}
+
+/*---images---*/
+
+.tableImg {
+    height: 80px;
+    transition: transform 250ms linear;
+}
+
+/*---eko indeliai maisto issinesimui---*/
+
+.oneImg1 {
+    background-image: url(../images/products/tableProdutcs/EkoIndeliaiMaistoIssinesimui/1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+/*---vienkartiniai indai ir irankiai---*/
+
+.twoImg1 {
+    background-image: url(../images/products/tableProdutcs/vienkartiniaiIndaiIrIrankiai/1.png);
+    background-size: cover;
+    background-position: center;
+    transform: scale(0.8);
+}
+
+.twoImg2 {
+    background-image: url(../images/products/tableProdutcs/vienkartiniaiIndaiIrIrankiai/1.png);
+    background-size: cover;
+    background-position: center;
+    transform: scale(0.8);
+}
+
+/*---Contact Form---*/
+
+.cFormC {
+    width: 1280px;
+    padding: 50px 20px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.formText {
+    margin: 0 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ftp {}
